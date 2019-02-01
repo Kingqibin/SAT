@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SAT_2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/C/SAT_2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SAT_2">
+				<Option output="E:/C/SAT_2/cmake-build-debug/SAT_2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/C/SAT_2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/4.9.2/include"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/4.9.2/../../../../include"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/4.9.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SAT_2"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SAT_2/fast">
+				<Option output="E:/C/SAT_2/cmake-build-debug/SAT_2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/C/SAT_2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/4.9.2/include"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/4.9.2/../../../../include"/>
+					<Add directory="C:/MinGW/bin/../lib/gcc/mingw32/4.9.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SAT_2/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/C/SAT_2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/C/SAT_2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C/SAT_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/C/SAT_2/head/Clause.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/ClauseList.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/ClauseMap.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/DPLL.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/Literal.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/LiteralList.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/MyStack.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/head/SAT.h">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/Clause.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/ClauseList.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/ClauseMap.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/DPLL.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/Literal.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/LiteralList.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/MyStack.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/SAT.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/main.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
