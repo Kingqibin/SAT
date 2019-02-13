@@ -8,7 +8,7 @@ void backSimplify(int , Literal *array);
 int back(MyStack **myStack,Literal *array);
 MyStack * backToNextPoint(MyStack *myStack,Literal *array);
 int pickLiteral(Literal *array);
-#define DEBUG
+//#define DEBUG
 Result DPLL(ClauseMap *map,Literal *array)
 {
     int singleton = 0;
@@ -18,35 +18,37 @@ Result DPLL(ClauseMap *map,Literal *array)
     {
         if (b==0)
         {
+            //判断map中是否还有singleton的clause，如果存在则返回值，否则返回0
             singleton = hasSingleton(map);
             if (singleton!=0)
             {
+                //存在则将singleton压栈
                 myStack = push(myStack,singleton,0);
             } else{
+                //不存在则选择一个元素
                 singleton = pickLiteral(array);
+                //如果singleton == 0 则说明所有的元素都已经被选择，则直接返回
                 if (singleton == 0)
                 {
                     return Sat;
                 }
+                //决策标记
                 r++;
+                //压栈
                 myStack = push(myStack,singleton,r);
             }
         } else if (b == -1)
         {
+            //当b==-1时说明已经回退到最初的状态，即不满足，则直接跳出
             return UnSat;
         }
-#ifdef DEBUG
-        printf("simplify with %4d\tbackpoint is %4d\n",myStack->literal,myStack->backPoint);
-#endif
+        //根据选择的元素进行化简
         simplify(myStack->literal,array);
 
         switch (watchMap(map))
         {
-            //返会-1说明存在不满足的句子
+            //返会-1说明存在不满足的句子，进行回退操作
             case -1:
-#ifdef DEBUG
-                printf("back from %4d\tbackpoint is %4d\n",myStack->literal,myStack->backPoint);
-#endif
                 b = back(&myStack,array);
                 break;
             //返回1 说明句子已经满足  直接跳出即可
@@ -56,7 +58,6 @@ Result DPLL(ClauseMap *map,Literal *array)
                 b = 0;
                 break;
         }
-
     }
 }
 
@@ -129,25 +130,32 @@ int pickLiteral(Literal *array)
 {
     int size = array->value;
     int max = 0,save = 0;
-    for (int i = 1; i <= size; ++i) {
+//    for (int i = 1; i <= size; ++i) {
+//        if ((array+i)->value != True &&(array+i)->value != False)
+//        {
+//            int p = countClause(array+i);
+//            if (p > max)
+//            {
+//                max = p;
+//                save = i;
+//            }
+//        }
+//        if ((array-i)->value!=True && (array-i)->value != False)
+//        {
+//            int n = countClause(array-i);
+//            if (n>max)
+//            {
+//                max = n;
+//                save = -i;
+//            }
+//        }
+//    }
+//选择第一个符合条件的值：
+    for (int i = 0; i <= size; ++i) {
         if ((array+i)->value != True &&(array+i)->value != False)
-        {
-            int p = countClause(array+i);
-            if (p > max)
-            {
-                max = p;
-                save = i;
-            }
-        }
-        if ((array-i)->value!=True && (array-i)->value != False)
-        {
-            int n = countClause(array-i);
-            if (n>max)
-            {
-                max = n;
-                save = -i;
-            }
-        }
+            save = i;
+        else if ((array-i)->value!=True && (array-i)->value != False)
+            save = -i;
     }
     return save;
 }

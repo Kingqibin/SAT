@@ -338,6 +338,33 @@ source/SAT.c.s:
 	$(MAKE) -f CMakeFiles\SAT_2.dir\build.make CMakeFiles/SAT_2.dir/source/SAT.c.s
 .PHONY : source/SAT.c.s
 
+source/Sudoku.obj: source/Sudoku.c.obj
+
+.PHONY : source/Sudoku.obj
+
+# target to build an object file
+source/Sudoku.c.obj:
+	$(MAKE) -f CMakeFiles\SAT_2.dir\build.make CMakeFiles/SAT_2.dir/source/Sudoku.c.obj
+.PHONY : source/Sudoku.c.obj
+
+source/Sudoku.i: source/Sudoku.c.i
+
+.PHONY : source/Sudoku.i
+
+# target to preprocess a source file
+source/Sudoku.c.i:
+	$(MAKE) -f CMakeFiles\SAT_2.dir\build.make CMakeFiles/SAT_2.dir/source/Sudoku.c.i
+.PHONY : source/Sudoku.c.i
+
+source/Sudoku.s: source/Sudoku.c.s
+
+.PHONY : source/Sudoku.s
+
+# target to generate assembly for a file
+source/Sudoku.c.s:
+	$(MAKE) -f CMakeFiles\SAT_2.dir\build.make CMakeFiles/SAT_2.dir/source/Sudoku.c.s
+.PHONY : source/Sudoku.c.s
+
 source/main.obj: source/main.c.obj
 
 .PHONY : source/main.obj
@@ -398,6 +425,9 @@ help:
 	@echo ... source/SAT.obj
 	@echo ... source/SAT.i
 	@echo ... source/SAT.s
+	@echo ... source/Sudoku.obj
+	@echo ... source/Sudoku.i
+	@echo ... source/Sudoku.s
 	@echo ... source/main.obj
 	@echo ... source/main.i
 	@echo ... source/main.s

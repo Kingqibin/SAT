@@ -98,6 +98,9 @@
 		<Unit filename="E:/C/SAT_2/head/SAT.h">
 			<Option target="SAT_2"/>
 		</Unit>
+		<Unit filename="E:/C/SAT_2/head/Sudoku.h">
+			<Option target="SAT_2"/>
+		</Unit>
 		<Unit filename="E:/C/SAT_2/source/Clause.c">
 			<Option target="SAT_2"/>
 		</Unit>
@@ -120,6 +123,9 @@
 			<Option target="SAT_2"/>
 		</Unit>
 		<Unit filename="E:/C/SAT_2/source/SAT.c">
+			<Option target="SAT_2"/>
+		</Unit>
+		<Unit filename="E:/C/SAT_2/source/Sudoku.c">
 			<Option target="SAT_2"/>
 		</Unit>
 		<Unit filename="E:/C/SAT_2/source/main.c">

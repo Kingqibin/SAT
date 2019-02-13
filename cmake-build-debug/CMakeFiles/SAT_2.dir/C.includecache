@@ -58,6 +58,16 @@ E:/C/SAT_2/head/DPLL.h
 time.h
 -
 
+E:/C/SAT_2/head/Sudoku.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+SAT.h
+E:/C/SAT_2/head/SAT.h
+
 E:/C/SAT_2/source/main.c
 stdio.h
 -
@@ -67,4 +77,6 @@ stdlib.h
 E:/C/SAT_2/head/SAT.h
 time.h
 -
+../head/Sudoku.h
+E:/C/SAT_2/head/Sudoku.h
 

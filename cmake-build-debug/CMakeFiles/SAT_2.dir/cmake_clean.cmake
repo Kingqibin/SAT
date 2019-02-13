@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SAT_2.dir/source/SAT.c.obj"
   "CMakeFiles/SAT_2.dir/source/DPLL.c.obj"
   "CMakeFiles/SAT_2.dir/source/MyStack.c.obj"
+  "CMakeFiles/SAT_2.dir/source/Sudoku.c.obj"
   "SAT_2.pdb"
   "SAT_2.exe"
   "SAT_2.exe.manifest"

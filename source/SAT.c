@@ -3,39 +3,31 @@
 //
 
 #include "../head/SAT.h"
-//#define ShowMap
-//#define DEBUG
 #define MAX_CHAR 1024*1024
+//#define DEBUG
 ClauseMap *createClauseMap(char *filename);
+int checkResult(char *input, char *output);
 void add_clauselist_to_literal(Literal *array,ClauseMap map);
-void SAT(char *name)
+char *replaceCNF(char *fileName);
+char *SAT(char *name)
 {
     ClauseMap *myMap = createClauseMap(name);
     Literal *array = createLiteralArray(myMap->Count.eles);
     add_clauselist_to_literal(array,*myMap);
-#ifdef ShowMap
-    showClauseMap(myMap);
-    showLiteralArray(array);
-#endif
     clock_t  s , f ;
     s = clock();
-    freopen("","w",stdout);
     Result r = DPLL(myMap,array);
     f = clock();
-    if (r==Sat)
-        printf("Sat\n");
-    else
-        printf("UnSat\n");
-#ifndef DEBUG
-    freopen("","w",stdout);
+    char *outputFile = replaceCNF(name);
+    freopen(outputFile,"w",stdout);
 
     printf("s ");
     if (r== Sat)
     {
         printf("1\nv ");
         int size = array->value;
-        for (int i = 1; i < size; ++i) {
-            if ((array+i)->value == True)
+        for (int i = 1; i <= size; ++i) {
+            if ((array+i)->value != False)
                 printf("%d ",i);
             else
                 printf("-%d ",i);
@@ -45,23 +37,34 @@ void SAT(char *name)
         printf("0\nv ");
 
     printf("\nt %ld\n",f-s);
-//    printf("index\tpositive\tnegative\tcorrect\n");
-//    int size = array->value;
-//    for (int i = 1; i < size; ++i) {
-//        printf("%d\t%d\t%d\t",i,(array+i)->value,(array-i)->value);
-//        if (((array+i)->value) == -((array-i)->value))
-//            printf("Y");
-//        else
-//            printf("N");
-//        printf("\n");
-//    }
-//    printf("\n");
-//
-//    showClauseMap(myMap);
-//    showLiteralArray(array);
+    freopen("CON","w",stdout);
+#ifdef DEBUG
+    int size = array->value;
+    for (int i = 1; i < size; ++i) {
+        printf("%d\t%d\t%d\t",i,(array+i)->value,(array-i)->value);
+        if (((array+i)->value) == -((array-i)->value))
+            printf("Y");
+        else
+            printf("N");
+        printf("\n");
+    }
+
+    printf("\n");
 #endif
     freeLiteralArray(array);
     freeClauseMap(myMap);
+    return outputFile;
+}
+
+char *replaceCNF(char *fileName)
+{
+    char *new  = (char *)malloc(strlen(fileName)+1);
+    new  = strcpy(new,fileName);
+    char *p = strstr(new,".cnf");
+    *(p+1) = 'r';
+    *(p+2) = 'e';
+    *(p+3) = 's';
+    return new;
 }
 void add_clauselist_to_literal(Literal *array,ClauseMap map)
 {
@@ -128,4 +131,4 @@ ClauseMap *createClauseMap(char *filename)
     }
     return map;
 }
-#undef ShowMap
+#undef DEBUG

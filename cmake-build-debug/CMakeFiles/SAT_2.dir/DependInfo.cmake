@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "E:/C/SAT_2/source/LiteralList.c" "E:/C/SAT_2/cmake-build-debug/CMakeFiles/SAT_2.dir/source/LiteralList.c.obj"
   "E:/C/SAT_2/source/MyStack.c" "E:/C/SAT_2/cmake-build-debug/CMakeFiles/SAT_2.dir/source/MyStack.c.obj"
   "E:/C/SAT_2/source/SAT.c" "E:/C/SAT_2/cmake-build-debug/CMakeFiles/SAT_2.dir/source/SAT.c.obj"
+  "E:/C/SAT_2/source/Sudoku.c" "E:/C/SAT_2/cmake-build-debug/CMakeFiles/SAT_2.dir/source/Sudoku.c.obj"
   "E:/C/SAT_2/source/main.c" "E:/C/SAT_2/cmake-build-debug/CMakeFiles/SAT_2.dir/source/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

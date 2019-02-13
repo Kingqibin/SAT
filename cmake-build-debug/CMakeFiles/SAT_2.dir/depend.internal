@@ -48,6 +48,17 @@ CMakeFiles/SAT_2.dir/source/SAT.c.obj
  E:/C/SAT_2/head/MyStack.h
  E:/C/SAT_2/head/SAT.h
  E:/C/SAT_2/source/SAT.c
+CMakeFiles/SAT_2.dir/source/Sudoku.c.obj
+ E:/C/SAT_2/head/Clause.h
+ E:/C/SAT_2/head/ClauseList.h
+ E:/C/SAT_2/head/ClauseMap.h
+ E:/C/SAT_2/head/DPLL.h
+ E:/C/SAT_2/head/Literal.h
+ E:/C/SAT_2/head/LiteralList.h
+ E:/C/SAT_2/head/MyStack.h
+ E:/C/SAT_2/head/SAT.h
+ E:/C/SAT_2/head/Sudoku.h
+ E:/C/SAT_2/source/Sudoku.c
 CMakeFiles/SAT_2.dir/source/main.c.obj
  E:/C/SAT_2/head/Clause.h
  E:/C/SAT_2/head/ClauseList.h
@@ -57,4 +68,5 @@ CMakeFiles/SAT_2.dir/source/main.c.obj
  E:/C/SAT_2/head/LiteralList.h
  E:/C/SAT_2/head/MyStack.h
  E:/C/SAT_2/head/SAT.h
+ E:/C/SAT_2/head/Sudoku.h
  E:/C/SAT_2/source/main.c
