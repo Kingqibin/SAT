@@ -13,6 +13,7 @@ struct count{
 struct clauseMap{
     struct count Count;
     ClauseList *head;
+    ClauseList *tail;
 };
 typedef struct clauseMap ClauseMap;
 void showClauseMap(ClauseMap *map);

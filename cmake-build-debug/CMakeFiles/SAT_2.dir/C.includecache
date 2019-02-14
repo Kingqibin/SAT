@@ -6,59 +6,59 @@
 
 #IncludeRegexTransform: 
 
-E:/C/SAT_2/head/Clause.h
+/home/kingqi/work/CLanguage/SAT_2/head/Clause.h
 LiteralList.h
-E:/C/SAT_2/head/LiteralList.h
+/home/kingqi/work/CLanguage/SAT_2/head/LiteralList.h
 stdlib.h
 -
 
-E:/C/SAT_2/head/ClauseList.h
+/home/kingqi/work/CLanguage/SAT_2/head/ClauseList.h
 Clause.h
-E:/C/SAT_2/head/Clause.h
+/home/kingqi/work/CLanguage/SAT_2/head/Clause.h
 
-E:/C/SAT_2/head/ClauseMap.h
+/home/kingqi/work/CLanguage/SAT_2/head/ClauseMap.h
 ClauseList.h
-E:/C/SAT_2/head/ClauseList.h
+/home/kingqi/work/CLanguage/SAT_2/head/ClauseList.h
 
-E:/C/SAT_2/head/DPLL.h
+/home/kingqi/work/CLanguage/SAT_2/head/DPLL.h
 ClauseMap.h
-E:/C/SAT_2/head/ClauseMap.h
+/home/kingqi/work/CLanguage/SAT_2/head/ClauseMap.h
 Literal.h
-E:/C/SAT_2/head/Literal.h
+/home/kingqi/work/CLanguage/SAT_2/head/Literal.h
 MyStack.h
-E:/C/SAT_2/head/MyStack.h
+/home/kingqi/work/CLanguage/SAT_2/head/MyStack.h
 stdio.h
 -
 
-E:/C/SAT_2/head/Literal.h
+/home/kingqi/work/CLanguage/SAT_2/head/Literal.h
 ClauseList.h
-E:/C/SAT_2/head/ClauseList.h
+/home/kingqi/work/CLanguage/SAT_2/head/ClauseList.h
 
-E:/C/SAT_2/head/LiteralList.h
+/home/kingqi/work/CLanguage/SAT_2/head/LiteralList.h
 stdlib.h
 -
 stdio.h
 -
 
-E:/C/SAT_2/head/MyStack.h
+/home/kingqi/work/CLanguage/SAT_2/head/MyStack.h
 LiteralList.h
-E:/C/SAT_2/head/LiteralList.h
+/home/kingqi/work/CLanguage/SAT_2/head/LiteralList.h
 
-E:/C/SAT_2/head/SAT.h
+/home/kingqi/work/CLanguage/SAT_2/head/SAT.h
 stdio.h
 -
-mem.h
--
 ClauseMap.h
-E:/C/SAT_2/head/ClauseMap.h
+/home/kingqi/work/CLanguage/SAT_2/head/ClauseMap.h
 Literal.h
-E:/C/SAT_2/head/Literal.h
+/home/kingqi/work/CLanguage/SAT_2/head/Literal.h
 DPLL.h
-E:/C/SAT_2/head/DPLL.h
+/home/kingqi/work/CLanguage/SAT_2/head/DPLL.h
+string.h
+-
 time.h
 -
 
-E:/C/SAT_2/head/Sudoku.h
+/home/kingqi/work/CLanguage/SAT_2/head/Sudoku.h
 stdio.h
 -
 string.h
@@ -66,17 +66,17 @@ string.h
 stdlib.h
 -
 SAT.h
-E:/C/SAT_2/head/SAT.h
+/home/kingqi/work/CLanguage/SAT_2/head/SAT.h
 
-E:/C/SAT_2/source/main.c
+/home/kingqi/work/CLanguage/SAT_2/source/main.c
 stdio.h
 -
 stdlib.h
 -
 ../head/SAT.h
-E:/C/SAT_2/head/SAT.h
+/home/kingqi/work/CLanguage/SAT_2/head/SAT.h
 time.h
 -
 ../head/Sudoku.h
-E:/C/SAT_2/head/Sudoku.h
+/home/kingqi/work/CLanguage/SAT_2/head/Sudoku.h
 

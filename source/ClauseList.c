@@ -5,29 +5,29 @@
 #include "../head/ClauseList.h"
 ClauseList *createClauseList(ClauseList *head,Clause *new)
 {
+    head = (ClauseList *) malloc(sizeof(ClauseList));
     if (head==NULL)
     {
-        head = (ClauseList *) malloc(sizeof(ClauseList));
-        if (head==NULL)
-        {
-            printf("memory error!\n");
-            return NULL;
-        }
-        head->clause = new;
-        head->next = NULL;
-    } else
-    {
-        ClauseList *n = (ClauseList *)malloc(sizeof(ClauseList));
-        if (n==NULL)
-        {
-            printf("memory error!\n");
-            return NULL;
-        }
-        n->next = head;
-        n->clause = new;
-        head = n;
+        printf("memory error!\n");
+        return NULL;
     }
-    return  head;
+    head->clause = new;
+    head->next = NULL;
+    return head;
+}
+ClauseList *insertClauseList(ClauseList *tail,Clause *clause)
+{
+    ClauseList *new = (ClauseList *)malloc(sizeof(ClauseList));
+    if (new == NULL)
+    {
+        printf("memory error!\n");
+        return  NULL;
+    }
+    new->next = NULL;
+    new->clause = clause;
+    tail->next = new;
+    tail = new;
+    return tail;
 }
 void showClauseList(ClauseList *clauseList)
 {

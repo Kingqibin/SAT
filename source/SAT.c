@@ -6,7 +6,6 @@
 #define MAX_CHAR 1024*1024
 //#define DEBUG
 ClauseMap *createClauseMap(char *filename);
-int checkResult(char *input, char *output);
 void add_clauselist_to_literal(Literal *array,ClauseMap map);
 char *replaceCNF(char *fileName);
 char *SAT(char *name)
@@ -14,30 +13,30 @@ char *SAT(char *name)
     ClauseMap *myMap = createClauseMap(name);
     Literal *array = createLiteralArray(myMap->Count.eles);
     add_clauselist_to_literal(array,*myMap);
+
     clock_t  s , f ;
     s = clock();
     Result r = DPLL(myMap,array);
     f = clock();
     char *outputFile = replaceCNF(name);
-    freopen(outputFile,"w",stdout);
-
-    printf("s ");
+    FILE *out = fopen(outputFile,"w");
+    fprintf(out,"s ");
     if (r== Sat)
     {
-        printf("1\nv ");
+        fprintf(out,"1\nv ");
         int size = array->value;
         for (int i = 1; i <= size; ++i) {
             if ((array+i)->value != False)
-                printf("%d ",i);
+                fprintf(out,"%d ",i);
             else
-                printf("-%d ",i);
+                fprintf(out,"-%d ",i);
         }
     }
     else
-        printf("0\nv ");
+        fprintf(out,"0\nv ");
 
-    printf("\nt %ld\n",f-s);
-    freopen("CON","w",stdout);
+    fprintf(out,"\nt %ld\n",f-s);
+    fclose(out);
 #ifdef DEBUG
     int size = array->value;
     for (int i = 1; i < size; ++i) {
@@ -71,14 +70,18 @@ void add_clauselist_to_literal(Literal *array,ClauseMap map)
     if (map.head==NULL)
         return;
     ClauseList *list = map.head;
+    //list 用来遍历每一个语句
     while (list!=NULL)
     {
+        //clause 指向该结点的数据
         Clause *clause = list->clause;
+        //literalList指向该句子的第一句literal
         LiteralList *literalList = clause->myList;
         while (literalList!=NULL)
         {
             int n = literalList->literal;
-            (array+n)->myList = createLiteralClauseList(array+n,clause);
+            //创建array+n那个literal的clauseList
+            updateLiteralClauseList(array + n, clause);
             (array+n)->clause_nums ++;
             literalList = literalList->next;
         }
@@ -124,9 +127,18 @@ ClauseMap *createClauseMap(char *filename)
             }
         } else
         {
+            if (feof(file))
+                break;
             Clause *myClause = createClause(k,str);
             k++;
-            map->head = createClauseList(map->head,myClause);
+            if (map->head == NULL)
+            {
+                map->head = createClauseList(map->head,myClause);
+                map->tail = map->head;
+            } else
+            {
+                map->tail = insertClauseList(map->tail,myClause);
+            }
         }
     }
     return map;

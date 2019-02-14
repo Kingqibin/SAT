@@ -29,6 +29,11 @@ void Sudoku(char *fileName)
 void show(char *solution)
 {
     FILE *file = fopen(solution,"r");
+    if (file==NULL)
+    {
+        printf("error!\n");
+        return;
+    }
     char c;
     while (!feof(file))
     {
@@ -165,7 +170,7 @@ void parseProblem(char *fileName, char *outputName)
     while (!feof(input))
     {
         fscanf(input,"%c",&n);
-        if (n=='\n')
+        if (n=='\n' || n=='\r')
             continue;
         if (n != '0')
         {

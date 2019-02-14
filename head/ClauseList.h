@@ -13,6 +13,7 @@ struct clause_list{
 };
 typedef struct clause_list ClauseList;
 ClauseList *createClauseList(ClauseList *,Clause *);
+ClauseList *insertClauseList(ClauseList *,Clause *);
 void showClauseList(ClauseList *clauseList);
 void freeClauseList(ClauseList *clauseList);
 int satClauseList(ClauseList *list,int );

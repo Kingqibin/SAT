@@ -3,26 +3,39 @@
 //
 
 #include "../head/Literal.h"
-ClauseList *createLiteralClauseList(Literal *literal,Clause *clause)
+void updateLiteralClauseList(Literal *literal, Clause *clause)
 {
-    ClauseList *head = literal->myList;
-    return createClauseList(head,clause);
+    if (literal->head ==NULL)
+    {
+        literal->head = createClauseList(NULL,clause);
+        literal->tail = literal->head;
+    } else
+    {
+        literal->tail = insertClauseList(literal->tail,clause);
+    }
 }
 Literal *createLiteralArray(int size)
 {
-    Literal *array = (Literal *)calloc((size_t)(2*size + 1) , sizeof(Literal));
+    Literal *array = (Literal *)malloc((2*size+1) * sizeof(Literal));
+    if (array==NULL)
+    {
+        printf("memory error!\n");
+        return NULL;
+    }
     array += size;
+    //中间结点保存array的大小
     array->value = size;
     array->num = 0;
-    array->myList=NULL;
+    array->head=NULL;
     for (int i = 1; i <= size; ++i) {
-        (array+i)->myList = NULL;
+        (array+i)->head = NULL;
         (array+i)->value = Not;
         (array+i)->num=i;
-        (array-i)->myList = NULL;
+        (array+i)->clause_nums = 0;
+
+        (array-i)->head = NULL;
         (array-i)->value = Not;
         (array-i)->num = -i;
-        (array+i)->clause_nums = 0;
         (array-i)->clause_nums = 0;
     }
     return array;
@@ -44,7 +57,7 @@ void showLiteral(Literal *literal)
     }
     printf("clause num is:%d\n",literal->clause_nums);
     printf("clause as fellows:\n");
-    showClauseList(literal->myList);
+    showClauseList(literal->head);
     printf("\n");
 }
 void showLiteralArray(Literal *array)
@@ -59,7 +72,7 @@ void showLiteralArray(Literal *array)
 }
 void freeLiteralClauseList(Literal *literal)
 {
-    ClauseList *list = literal->myList;
+    ClauseList *list = literal->head;
     ClauseList *save = list;
     while (list!=NULL)
     {
@@ -83,27 +96,27 @@ void freeLiteralArray(Literal *array)
 int satLiteral(Literal *literal)
 {
     literal->value = True ;
-    return satClauseList(literal->myList,literal->num);
+    return satClauseList(literal->head,literal->num);
 }
 int backSatLiteral(Literal *literal)
 {
     literal->value = Not;
-    return backSatClauseList(literal->myList,literal->num);
+    return backSatClauseList(literal->head,literal->num);
 }
 void unSatLiteral(Literal *literal)
 {
     literal->value = False;
-    unSatClauseList(literal->myList,literal->num);
+    unSatClauseList(literal->head,literal->num);
 }
 void backUnSatLiteral(Literal *literal)
 {
     literal->value = Not;
-    backUnSatClauseList(literal->myList,literal->num);
+    backUnSatClauseList(literal->head,literal->num);
 }
 int countClause(Literal *literal)
 {
     int i = 0 ;
-    ClauseList *clauseList = literal->myList ;
+    ClauseList *clauseList = literal->head ;
     while (clauseList!=NULL)
     {
         if(clauseList->clause->status != Success)

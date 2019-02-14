@@ -12,11 +12,12 @@ typedef enum {True=1,False=-1,Not=0} Value;
 struct literal{
     int num ; //当num为0时  Value存储数组长度的一半 n；
     Value value;
-    ClauseList *myList;
+    ClauseList *head;
+    ClauseList *tail;
     int clause_nums;
 };
 typedef struct literal Literal;
-ClauseList *createLiteralClauseList(Literal *literal,Clause *list);
+void updateLiteralClauseList(Literal *literal, Clause *clause);
 Literal *createLiteralArray(int size);
 void showLiteral(Literal *literal);
 void showLiteralArray(Literal *array);
