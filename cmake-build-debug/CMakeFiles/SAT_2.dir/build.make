@@ -187,6 +187,45 @@ CMakeFiles/SAT_2.dir/source/Sudoku.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAT_2.dir/source/Sudoku.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kingqi/work/CLanguage/SAT_2/source/Sudoku.c -o CMakeFiles/SAT_2.dir/source/Sudoku.c.s
 
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: CMakeFiles/SAT_2.dir/flags.make
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../source/CreateSudo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kingqi/work/CLanguage/SAT_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/SAT_2.dir/source/CreateSudo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SAT_2.dir/source/CreateSudo.c.o   -c /home/kingqi/work/CLanguage/SAT_2/source/CreateSudo.c
+
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAT_2.dir/source/CreateSudo.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kingqi/work/CLanguage/SAT_2/source/CreateSudo.c > CMakeFiles/SAT_2.dir/source/CreateSudo.c.i
+
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAT_2.dir/source/CreateSudo.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kingqi/work/CLanguage/SAT_2/source/CreateSudo.c -o CMakeFiles/SAT_2.dir/source/CreateSudo.c.s
+
+CMakeFiles/SAT_2.dir/source/helper.c.o: CMakeFiles/SAT_2.dir/flags.make
+CMakeFiles/SAT_2.dir/source/helper.c.o: ../source/helper.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kingqi/work/CLanguage/SAT_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SAT_2.dir/source/helper.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SAT_2.dir/source/helper.c.o   -c /home/kingqi/work/CLanguage/SAT_2/source/helper.c
+
+CMakeFiles/SAT_2.dir/source/helper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAT_2.dir/source/helper.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kingqi/work/CLanguage/SAT_2/source/helper.c > CMakeFiles/SAT_2.dir/source/helper.c.i
+
+CMakeFiles/SAT_2.dir/source/helper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAT_2.dir/source/helper.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kingqi/work/CLanguage/SAT_2/source/helper.c -o CMakeFiles/SAT_2.dir/source/helper.c.s
+
+CMakeFiles/SAT_2.dir/source/game.c.o: CMakeFiles/SAT_2.dir/flags.make
+CMakeFiles/SAT_2.dir/source/game.c.o: ../source/game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kingqi/work/CLanguage/SAT_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/SAT_2.dir/source/game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SAT_2.dir/source/game.c.o   -c /home/kingqi/work/CLanguage/SAT_2/source/game.c
+
+CMakeFiles/SAT_2.dir/source/game.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAT_2.dir/source/game.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kingqi/work/CLanguage/SAT_2/source/game.c > CMakeFiles/SAT_2.dir/source/game.c.i
+
+CMakeFiles/SAT_2.dir/source/game.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAT_2.dir/source/game.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kingqi/work/CLanguage/SAT_2/source/game.c -o CMakeFiles/SAT_2.dir/source/game.c.s
+
 # Object files for target SAT_2
 SAT_2_OBJECTS = \
 "CMakeFiles/SAT_2.dir/source/main.c.o" \
@@ -198,7 +237,10 @@ SAT_2_OBJECTS = \
 "CMakeFiles/SAT_2.dir/source/SAT.c.o" \
 "CMakeFiles/SAT_2.dir/source/DPLL.c.o" \
 "CMakeFiles/SAT_2.dir/source/MyStack.c.o" \
-"CMakeFiles/SAT_2.dir/source/Sudoku.c.o"
+"CMakeFiles/SAT_2.dir/source/Sudoku.c.o" \
+"CMakeFiles/SAT_2.dir/source/CreateSudo.c.o" \
+"CMakeFiles/SAT_2.dir/source/helper.c.o" \
+"CMakeFiles/SAT_2.dir/source/game.c.o"
 
 # External object files for target SAT_2
 SAT_2_EXTERNAL_OBJECTS =
@@ -213,9 +255,12 @@ SAT_2: CMakeFiles/SAT_2.dir/source/SAT.c.o
 SAT_2: CMakeFiles/SAT_2.dir/source/DPLL.c.o
 SAT_2: CMakeFiles/SAT_2.dir/source/MyStack.c.o
 SAT_2: CMakeFiles/SAT_2.dir/source/Sudoku.c.o
+SAT_2: CMakeFiles/SAT_2.dir/source/CreateSudo.c.o
+SAT_2: CMakeFiles/SAT_2.dir/source/helper.c.o
+SAT_2: CMakeFiles/SAT_2.dir/source/game.c.o
 SAT_2: CMakeFiles/SAT_2.dir/build.make
 SAT_2: CMakeFiles/SAT_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kingqi/work/CLanguage/SAT_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable SAT_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kingqi/work/CLanguage/SAT_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable SAT_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SAT_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

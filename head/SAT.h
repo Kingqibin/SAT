@@ -11,5 +11,5 @@
 #include "DPLL.h"
 #include <string.h>
 #include <time.h>
-char * SAT(char *name);
+char *SAT(char *name,int m);
 #endif //SAT_2_SAT_H

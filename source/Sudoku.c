@@ -9,8 +9,8 @@ void write_1(char *);
 void write_2(char *);
 void write_3(char *);
 void write_4(char *);
-void show(char *);
-void Sudoku(char *fileName)
+int readRes(char *);
+int Sudoku(char *fileName)
 {
     char *outputName = getOutputName(fileName);
     parseProblem(fileName,outputName);
@@ -23,51 +23,15 @@ void Sudoku(char *fileName)
     //each 3*3 box has one value
     write_4(outputName);
     //求解：
-    char *solution =  SAT(outputName);
-    show(solution);
+    char *solution =  SAT(outputName,1);
+    return  readRes(solution);
 }
-void show(char *solution)
+int readRes(char *solution)
 {
-    FILE *file = fopen(solution,"r");
-    if (file==NULL)
-    {
-        printf("error!\n");
-        return;
-    }
-    char c;
-    while (!feof(file))
-    {
-        fscanf(file,"%c",&c);
-        if (c == 'v')
-        {
-            fscanf(file,"%c",&c);
-            break;
-        }
-    }
     int n;
-    printf("----------------------------------------\n");
-    for (int i = 0; i < 9; ++i) {
-        printf("|");
-        for (int j = 0; j < 9; ++j) {
-            for (int k = 0; k < 9; ++k) {
-                fscanf(file,"%d",&n);
-                if (n>0)
-                {
-                    printf("%3d ",n-i*81-j*9);
-                }
-            }
-            if ((j+1)%3 == 0)
-            {
-                printf("|");
-            }
-        }
-        printf("\n");
-        if ((i+1)%3 == 0)
-        {
-            printf("----------------------------------------\n");
-        }
-    }
-    fclose(file);
+    FILE *file = fopen(solution,"r");
+    fscanf(file,"s %d",&n);
+    return n;
 }
 
 void write_4(char *outputName)

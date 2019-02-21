@@ -16,6 +16,19 @@ CMakeFiles/SAT_2.dir/source/ClauseMap.c.o: ../head/ClauseMap.h
 CMakeFiles/SAT_2.dir/source/ClauseMap.c.o: ../head/LiteralList.h
 CMakeFiles/SAT_2.dir/source/ClauseMap.c.o: ../source/ClauseMap.c
 
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/Clause.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/ClauseList.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/ClauseMap.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/CreateSudo.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/DPLL.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/Literal.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/LiteralList.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/MyStack.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/SAT.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/Sudoku.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../head/helper.h
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o: ../source/CreateSudo.c
+
 CMakeFiles/SAT_2.dir/source/DPLL.c.o: ../head/Clause.h
 CMakeFiles/SAT_2.dir/source/DPLL.c.o: ../head/ClauseList.h
 CMakeFiles/SAT_2.dir/source/DPLL.c.o: ../head/ClauseMap.h
@@ -59,14 +72,23 @@ CMakeFiles/SAT_2.dir/source/Sudoku.c.o: ../head/SAT.h
 CMakeFiles/SAT_2.dir/source/Sudoku.c.o: ../head/Sudoku.h
 CMakeFiles/SAT_2.dir/source/Sudoku.c.o: ../source/Sudoku.c
 
+CMakeFiles/SAT_2.dir/source/game.c.o: ../head/game.h
+CMakeFiles/SAT_2.dir/source/game.c.o: ../source/game.c
+
+CMakeFiles/SAT_2.dir/source/helper.c.o: ../head/helper.h
+CMakeFiles/SAT_2.dir/source/helper.c.o: ../source/helper.c
+
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/Clause.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/ClauseList.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/ClauseMap.h
+CMakeFiles/SAT_2.dir/source/main.c.o: ../head/CreateSudo.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/DPLL.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/Literal.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/LiteralList.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/MyStack.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/SAT.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../head/Sudoku.h
+CMakeFiles/SAT_2.dir/source/main.c.o: ../head/game.h
+CMakeFiles/SAT_2.dir/source/main.c.o: ../head/helper.h
 CMakeFiles/SAT_2.dir/source/main.c.o: ../source/main.c
 

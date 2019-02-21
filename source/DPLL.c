@@ -7,9 +7,9 @@ void simplify(int, Literal *array);
 void backSimplify(int , Literal *array);
 int back(MyStack **myStack,Literal *array);
 MyStack * backToNextPoint(MyStack *myStack,Literal *array);
-int pickLiteral(Literal *array);
+int pickLiteral(Literal *array,int m);
 //#define DEBUG
-Result DPLL(ClauseMap *map,Literal *array)
+Result DPLL(ClauseMap *map,Literal *array,int m)
 {
     int singleton = 0;
     MyStack *myStack = NULL;
@@ -26,7 +26,7 @@ Result DPLL(ClauseMap *map,Literal *array)
                 myStack = push(myStack,singleton,0);
             } else{
                 //不存在则选择一个元素
-                singleton = pickLiteral(array);
+                singleton = pickLiteral(array,m);
                 //如果singleton == 0 则说明所有的元素都已经被选择，则直接返回
                 if (singleton == 0)
                 {
@@ -126,36 +126,40 @@ MyStack * backToNextPoint(MyStack *myStack,Literal *array)
     //遇到不等于0的点就返回
     return myStack;
 }
-int pickLiteral(Literal *array)
+int pickLiteral(Literal *array,int m)
 {
     int size = array->value;
     int max = 0,save = 0;
-//    for (int i = 1; i <= size; ++i) {
-//        if ((array+i)->value != True &&(array+i)->value != False)
-//        {
-//            int p = countClause(array+i);
-//            if (p > max)
-//            {
-//                max = p;
-//                save = i;
-//            }
-//        }
-//        if ((array-i)->value!=True && (array-i)->value != False)
-//        {
-//            int n = countClause(array-i);
-//            if (n>max)
-//            {
-//                max = n;
-//                save = -i;
-//            }
-//        }
-//    }
-//选择第一个符合条件的值：
-    for (int i = 0; i <= size; ++i) {
-        if ((array+i)->value != True &&(array+i)->value != False)
-            save = i;
-        else if ((array-i)->value!=True && (array-i)->value != False)
-            save = -i;
+    if (m == 0)
+    {
+        for (int i = 1; i <= size; ++i) {
+            if ((array+i)->value != True &&(array+i)->value != False)
+            {
+                int p = countClause(array+i);
+                if (p > max)
+                {
+                    max = p;
+                    save = i;
+                }
+            }
+            if ((array-i)->value!=True && (array-i)->value != False)
+            {
+                int n = countClause(array-i);
+                if (n>max)
+                {
+                    max = n;
+                    save = -i;
+                }
+            }
+        }
+    } else
+    {
+        for (int i = 0; i <= size; ++i) {
+            if ((array+i)->value != True &&(array+i)->value != False)
+                save = i;
+            else if ((array-i)->value!=True && (array-i)->value != False)
+                save = -i;
+        }
     }
     return save;
 }

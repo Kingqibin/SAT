@@ -16,6 +16,19 @@ CMakeFiles/SAT_2.dir/source/ClauseMap.c.o
  /home/kingqi/work/CLanguage/SAT_2/head/ClauseMap.h
  /home/kingqi/work/CLanguage/SAT_2/head/LiteralList.h
  /home/kingqi/work/CLanguage/SAT_2/source/ClauseMap.c
+CMakeFiles/SAT_2.dir/source/CreateSudo.c.o
+ /home/kingqi/work/CLanguage/SAT_2/head/Clause.h
+ /home/kingqi/work/CLanguage/SAT_2/head/ClauseList.h
+ /home/kingqi/work/CLanguage/SAT_2/head/ClauseMap.h
+ /home/kingqi/work/CLanguage/SAT_2/head/CreateSudo.h
+ /home/kingqi/work/CLanguage/SAT_2/head/DPLL.h
+ /home/kingqi/work/CLanguage/SAT_2/head/Literal.h
+ /home/kingqi/work/CLanguage/SAT_2/head/LiteralList.h
+ /home/kingqi/work/CLanguage/SAT_2/head/MyStack.h
+ /home/kingqi/work/CLanguage/SAT_2/head/SAT.h
+ /home/kingqi/work/CLanguage/SAT_2/head/Sudoku.h
+ /home/kingqi/work/CLanguage/SAT_2/head/helper.h
+ /home/kingqi/work/CLanguage/SAT_2/source/CreateSudo.c
 CMakeFiles/SAT_2.dir/source/DPLL.c.o
  /home/kingqi/work/CLanguage/SAT_2/head/Clause.h
  /home/kingqi/work/CLanguage/SAT_2/head/ClauseList.h
@@ -59,14 +72,23 @@ CMakeFiles/SAT_2.dir/source/Sudoku.c.o
  /home/kingqi/work/CLanguage/SAT_2/head/SAT.h
  /home/kingqi/work/CLanguage/SAT_2/head/Sudoku.h
  /home/kingqi/work/CLanguage/SAT_2/source/Sudoku.c
+CMakeFiles/SAT_2.dir/source/game.c.o
+ /home/kingqi/work/CLanguage/SAT_2/head/game.h
+ /home/kingqi/work/CLanguage/SAT_2/source/game.c
+CMakeFiles/SAT_2.dir/source/helper.c.o
+ /home/kingqi/work/CLanguage/SAT_2/head/helper.h
+ /home/kingqi/work/CLanguage/SAT_2/source/helper.c
 CMakeFiles/SAT_2.dir/source/main.c.o
  /home/kingqi/work/CLanguage/SAT_2/head/Clause.h
  /home/kingqi/work/CLanguage/SAT_2/head/ClauseList.h
  /home/kingqi/work/CLanguage/SAT_2/head/ClauseMap.h
+ /home/kingqi/work/CLanguage/SAT_2/head/CreateSudo.h
  /home/kingqi/work/CLanguage/SAT_2/head/DPLL.h
  /home/kingqi/work/CLanguage/SAT_2/head/Literal.h
  /home/kingqi/work/CLanguage/SAT_2/head/LiteralList.h
  /home/kingqi/work/CLanguage/SAT_2/head/MyStack.h
  /home/kingqi/work/CLanguage/SAT_2/head/SAT.h
  /home/kingqi/work/CLanguage/SAT_2/head/Sudoku.h
+ /home/kingqi/work/CLanguage/SAT_2/head/game.h
+ /home/kingqi/work/CLanguage/SAT_2/head/helper.h
  /home/kingqi/work/CLanguage/SAT_2/source/main.c

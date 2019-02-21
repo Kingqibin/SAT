@@ -204,6 +204,33 @@ source/ClauseMap.c.s:
 	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/ClauseMap.c.s
 .PHONY : source/ClauseMap.c.s
 
+source/CreateSudo.o: source/CreateSudo.c.o
+
+.PHONY : source/CreateSudo.o
+
+# target to build an object file
+source/CreateSudo.c.o:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/CreateSudo.c.o
+.PHONY : source/CreateSudo.c.o
+
+source/CreateSudo.i: source/CreateSudo.c.i
+
+.PHONY : source/CreateSudo.i
+
+# target to preprocess a source file
+source/CreateSudo.c.i:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/CreateSudo.c.i
+.PHONY : source/CreateSudo.c.i
+
+source/CreateSudo.s: source/CreateSudo.c.s
+
+.PHONY : source/CreateSudo.s
+
+# target to generate assembly for a file
+source/CreateSudo.c.s:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/CreateSudo.c.s
+.PHONY : source/CreateSudo.c.s
+
 source/DPLL.o: source/DPLL.c.o
 
 .PHONY : source/DPLL.o
@@ -366,6 +393,60 @@ source/Sudoku.c.s:
 	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/Sudoku.c.s
 .PHONY : source/Sudoku.c.s
 
+source/game.o: source/game.c.o
+
+.PHONY : source/game.o
+
+# target to build an object file
+source/game.c.o:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/game.c.o
+.PHONY : source/game.c.o
+
+source/game.i: source/game.c.i
+
+.PHONY : source/game.i
+
+# target to preprocess a source file
+source/game.c.i:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/game.c.i
+.PHONY : source/game.c.i
+
+source/game.s: source/game.c.s
+
+.PHONY : source/game.s
+
+# target to generate assembly for a file
+source/game.c.s:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/game.c.s
+.PHONY : source/game.c.s
+
+source/helper.o: source/helper.c.o
+
+.PHONY : source/helper.o
+
+# target to build an object file
+source/helper.c.o:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/helper.c.o
+.PHONY : source/helper.c.o
+
+source/helper.i: source/helper.c.i
+
+.PHONY : source/helper.i
+
+# target to preprocess a source file
+source/helper.c.i:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/helper.c.i
+.PHONY : source/helper.c.i
+
+source/helper.s: source/helper.c.s
+
+.PHONY : source/helper.s
+
+# target to generate assembly for a file
+source/helper.c.s:
+	$(MAKE) -f CMakeFiles/SAT_2.dir/build.make CMakeFiles/SAT_2.dir/source/helper.c.s
+.PHONY : source/helper.c.s
+
 source/main.o: source/main.c.o
 
 .PHONY : source/main.o
@@ -411,6 +492,9 @@ help:
 	@echo "... source/ClauseMap.o"
 	@echo "... source/ClauseMap.i"
 	@echo "... source/ClauseMap.s"
+	@echo "... source/CreateSudo.o"
+	@echo "... source/CreateSudo.i"
+	@echo "... source/CreateSudo.s"
 	@echo "... source/DPLL.o"
 	@echo "... source/DPLL.i"
 	@echo "... source/DPLL.s"
@@ -429,6 +513,12 @@ help:
 	@echo "... source/Sudoku.o"
 	@echo "... source/Sudoku.i"
 	@echo "... source/Sudoku.s"
+	@echo "... source/game.o"
+	@echo "... source/game.i"
+	@echo "... source/game.s"
+	@echo "... source/helper.o"
+	@echo "... source/helper.i"
+	@echo "... source/helper.s"
 	@echo "... source/main.o"
 	@echo "... source/main.i"
 	@echo "... source/main.s"

@@ -9,6 +9,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/SAT_2.dir/source/DPLL.c.o"
   "CMakeFiles/SAT_2.dir/source/MyStack.c.o"
   "CMakeFiles/SAT_2.dir/source/Sudoku.c.o"
+  "CMakeFiles/SAT_2.dir/source/CreateSudo.c.o"
+  "CMakeFiles/SAT_2.dir/source/helper.c.o"
+  "CMakeFiles/SAT_2.dir/source/game.c.o"
   "SAT_2.pdb"
   "SAT_2"
 )

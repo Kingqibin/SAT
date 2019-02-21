@@ -8,7 +8,7 @@
 ClauseMap *createClauseMap(char *filename);
 void add_clauselist_to_literal(Literal *array,ClauseMap map);
 char *replaceCNF(char *fileName);
-char *SAT(char *name)
+char *SAT(char *name,int m)
 {
     ClauseMap *myMap = createClauseMap(name);
     Literal *array = createLiteralArray(myMap->Count.eles);
@@ -16,7 +16,7 @@ char *SAT(char *name)
 
     clock_t  s , f ;
     s = clock();
-    Result r = DPLL(myMap,array);
+    Result r = DPLL(myMap,array,m);
     f = clock();
     char *outputFile = replaceCNF(name);
     FILE *out = fopen(outputFile,"w");
@@ -35,7 +35,7 @@ char *SAT(char *name)
     else
         fprintf(out,"0\nv ");
 
-    fprintf(out,"\nt %ld\n",f-s);
+    fprintf(out,"\nt %ld\n",(f-s)/1000);
     fclose(out);
 #ifdef DEBUG
     int size = array->value;

@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "SAT.h"
-void Sudoku(char *);
+
+int Sudoku(char *);
 
 #endif //SAT_2_SUDOKU_H

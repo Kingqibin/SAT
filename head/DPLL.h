@@ -10,5 +10,5 @@
 #include "MyStack.h"
 #include <stdio.h>
 typedef enum {Sat,UnSat} Result;
-Result DPLL(ClauseMap *map,Literal *array);
+Result DPLL(ClauseMap *map,Literal *array,int );
 #endif //SAT_2_DPLL_H
