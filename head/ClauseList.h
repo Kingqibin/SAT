@@ -18,6 +18,6 @@ void showClauseList(ClauseList *clauseList);
 void freeClauseList(ClauseList *clauseList);
 int satClauseList(ClauseList *list,int );
 int backSatClauseList(ClauseList *list,int);
-void unSatClauseList(ClauseList *list,int literal);
-void backUnSatClauseList(ClauseList *list,int literal);
+int unSatClauseList(ClauseList *list,int literal);
+int backUnSatClauseList(ClauseList *list,int literal);
 #endif //SAT_2_CLAUSELIST_H

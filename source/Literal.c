@@ -96,22 +96,29 @@ void freeLiteralArray(Literal *array)
 int satLiteral(Literal *literal)
 {
     literal->value = True ;
-    return satClauseList(literal->head,literal->num);
+
+    int n = satClauseList(literal->head,literal->num);
+    literal->clause_nums-=n;
+    return n;
 }
 int backSatLiteral(Literal *literal)
 {
     literal->value = Not;
-    return backSatClauseList(literal->head,literal->num);
+    int n = backSatClauseList(literal->head,literal->num);
+    literal->clause_nums+=n;
+    return n;
 }
 void unSatLiteral(Literal *literal)
 {
     literal->value = False;
-    unSatClauseList(literal->head,literal->num);
+    int n =  unSatClauseList(literal->head,literal->num);
+    literal->clause_nums-=n;
 }
 void backUnSatLiteral(Literal *literal)
 {
     literal->value = Not;
-    backUnSatClauseList(literal->head,literal->num);
+    int n = backUnSatClauseList(literal->head,literal->num);
+    literal->clause_nums+=n;
 }
 int countClause(Literal *literal)
 {

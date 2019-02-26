@@ -22,6 +22,6 @@ void showClause(Clause *);
 void freeClause(Clause *);
 void satClause(Clause *,int);
 void backSatClause(Clause *clause,int);
-void unSatClause(Clause *, int);
+int unSatClause(Clause *, int);
 void backUnSatClause(Clause *, int);
 #endif //SAT_2_CLAUSE_H

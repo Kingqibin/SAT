@@ -4,10 +4,10 @@
 
 #include "../head/CreateSudo.h"
 #define NUM_BOX 11
-#define DEBUG
+//#define DEBUG
 void pickBoxes(int []);
 void showBoxes(int box[]);
-char * makeFile(int sudo[9][9]);
+char * makeFile(int sudo[9][9],char *name);
 int las_vegas(int [][9],int []);
 void showSudo(int sudo[][9]);
 void makeSudo(int sudo[][9], char *);
@@ -34,7 +34,8 @@ char *createSudo()
     fprintf(file,"%d",m+1);
     fclose(file);
 
-    return makeFile(sudo);
+    char *name = getSudoFileName(m+1);
+    return makeFile(sudo,name);
 }
 void dibble(int sudo[][9])
 {
@@ -111,7 +112,7 @@ int las_vegas(int sudo[9][9],int box[9])
         int n = box[i+1];
         sudo[m][n] = rand()%9+1;
     }
-    char *name = makeFile(sudo);
+    char *name = makeFile(sudo,"/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp");
     int n = Sudoku(name);
     if (n == 1)
     {
@@ -123,7 +124,7 @@ int las_vegas(int sudo[9][9],int box[9])
     }
     else
         initSudo(sudo);
-    free(name);
+    remove("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp");
     return n;
 }
 void makeSudo(int sudo[][9], char *res)
@@ -164,17 +165,9 @@ void pickBoxes(int boxes[])
     }
 }
 
-char *makeFile(int sudo[][9])
+char *makeFile(int sudo[][9],char *name)
 {
-#ifndef DEBUG
-    int m = readSudoNum("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudoNum");
-#endif
-#ifdef DEBUG
-    int m = 2;
-#endif
-    char *buffer = getSudoFileName(m+1);
-
-    FILE *file = fopen(buffer,"w");
+    FILE *file = fopen(name,"w");
 
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
@@ -184,7 +177,7 @@ char *makeFile(int sudo[][9])
             fprintf(file,"\n");
     }
     fclose(file);
-    return buffer;
+    return name;
 }
 void showSudo(int sudo[][9])
 {

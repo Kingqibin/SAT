@@ -10,7 +10,7 @@
 //#define DEBUG
 void sat();
 void sudo();
-void readTime(char *file);
+int readTime(char *file);
 int main() {
     int a ;
     do
@@ -64,12 +64,14 @@ void sat()
                        "/home/kingqi/work/CLanguage/SAT_2/input_file/base/function/unsat-5cnf-30.cnf",
                        "/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.cnf",
                        "/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.cnf"};
-    int a;
+    int a,b;
+    char path[1024];
     printf("选择将要执行的功能:\n");
     printf("1.测试功能样例\n");
     printf("2.测试性能样例\n");
     printf("3.对比优化\n");
-    printf("请输入【1 2 3】:   ");
+    printf("4.测试其他样例\n");
+    printf("请输入【1 2 3 4】:   ");
     scanf("%d",&a);
     int t;
     switch (a)
@@ -116,21 +118,43 @@ void sat()
             break;
         case 3:
             printf("正在求解...\n");
-            SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10_0.cnf",0);
-            SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10_1.cnf",1);
-            SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009_0.cnf",0);
-            SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009_1.cnf",1);
+            char *out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.cnf",0);
+            int a1 = readTime(out);
+            free(out);
+            out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.cnf",1);
+            int a2 = readTime(out);
+            free(out);
+
+            out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.cnf",0);
+            int b1 = readTime(out);
+            free(out);
+            out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.cnf",1);
+            int b2 = readTime(out);
+            free(out);
+
             printf("文件\t\t优化前\t优化后（ms）\n");
             printf("ais10.cnf\t");
-            readTime("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10_0.res");
-            printf("\t");
-            readTime("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10_1.res");
-            printf("\n");
+            printf("%d\t%d\n",a1,a2);
             printf("sud00009.cnf\t");
-            readTime("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009_0.res");
-            printf("\t");
-            readTime("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009_1.res");
-            printf("\n");
+            printf("%d\t%d\n",b1,b2);
+            break;
+        case 4:
+            printf("请输入文件路径\n");
+            scanf("%s",path);
+            printf("请输入测试次数\n");
+            scanf("%d",&b);
+            printf("优化前\t优化后（ms）\n");
+            while(b--){
+                char *out1 = SAT(path,0);
+                int slow = readTime(out1);
+                char *out2 = SAT(path,1);
+                int fast = readTime(out2);
+                printf("%d\t",slow);
+                printf("%d\n",fast);
+                free(out1);
+                free(out2);
+
+            }
             break;
         default:
             printf("错误输入！默认退出！\n");
@@ -171,7 +195,7 @@ void sudo()
     }
 }
 
-void readTime(char *fileName)
+int readTime(char *fileName)
 {
     char str[1024];
     FILE *file = fopen(fileName,"r");
@@ -184,7 +208,7 @@ void readTime(char *fileName)
         }
     }
     fscanf(file,"%s",str);
-    printf("%s",str);
     fclose(file);
+    return atoi(str);
 }
 #undef DEBUG

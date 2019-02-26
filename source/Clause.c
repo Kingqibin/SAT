@@ -138,8 +138,10 @@ void backSatClause(Clause *clause,int literal)
         clause->status = Success;
 
 }
-void unSatClause(Clause *clause,int literal)
+int unSatClause(Clause *clause,int literal)
 {
+    int b=0;
+
     //进入此处的clause的status只能是NoValue
     if((clause->status)!= NoValue)
         printf("something may error in unSatClause of literal %dits status is %d\n",literal,clause->status);
@@ -183,8 +185,10 @@ void unSatClause(Clause *clause,int literal)
     if (s==1)
     {
         clause->singleton = save;
+        b=1;
     } else
         clause->singleton = 0;
+    return b;
 }
 void backUnSatClause(Clause *clause, int literal)
 {

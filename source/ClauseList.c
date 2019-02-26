@@ -71,25 +71,32 @@ int backSatClauseList(ClauseList *list,int literal)
     }
     return i;
 }
-void unSatClauseList(ClauseList *list,int literal)
+int unSatClauseList(ClauseList *list,int literal)
 {
+    int n = 0;
     while (list!=NULL)
     {
         if (list->clause->status != Success)
         {
-            unSatClause(list->clause,literal);
+            if(unSatClause(list->clause,literal)==1)
+                n++;
         }
         list=list->next;
     }
+    return n;
 }
-void backUnSatClauseList(ClauseList *list,int literal)
+int backUnSatClauseList(ClauseList *list,int literal)
 {
+    int n=0;
     while (list!=NULL)
     {
         if (list->clause->status != Success)
         {
+            if (list->clause->status == Fail)
+                n++;
             backUnSatClause(list->clause,literal);
         }
         list = list->next;
     }
+    return n;
 }

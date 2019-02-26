@@ -135,7 +135,7 @@ int pickLiteral(Literal *array,int m)
         for (int i = 1; i <= size; ++i) {
             if ((array+i)->value != True &&(array+i)->value != False)
             {
-                int p = countClause(array+i);
+                int p = (array+i)->clause_nums;
                 if (p > max)
                 {
                     max = p;
@@ -144,7 +144,7 @@ int pickLiteral(Literal *array,int m)
             }
             if ((array-i)->value!=True && (array-i)->value != False)
             {
-                int n = countClause(array-i);
+                int n = (array-i)->clause_nums;
                 if (n>max)
                 {
                     max = n;
