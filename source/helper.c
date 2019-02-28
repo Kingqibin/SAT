@@ -44,7 +44,7 @@ int readSudoNum(char *filePath)
 }
 char *getSudoFileName(int n)
 {
-    char *string = "/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo";
+    char *string = "./Sudoku/sudo";
     char *t = itoa(n);
     char *buffer = (char *)malloc(strlen(string)+strlen(t)+1);
     strcpy(buffer,string);

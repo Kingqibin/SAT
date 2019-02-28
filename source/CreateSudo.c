@@ -24,13 +24,13 @@ char *createSudo()
     while(las_vegas(sudo,boxes)!=1);
 #endif
 #ifdef DEBUG
-    makeSudo(sudo,"/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo3.res");
+    makeSudo(sudo,"./Sudoku/sudo3.res");
     showSudo(sudo);
 #endif
     dibble(sudo);
     //更新数目
-    int m = readSudoNum("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudoNum");
-    FILE *file = fopen("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudoNum","w");
+    int m = readSudoNum("./Sudoku/sudoNum");
+    FILE *file = fopen("./Sudoku/sudoNum","w");
     fprintf(file,"%d",m+1);
     fclose(file);
 
@@ -71,7 +71,7 @@ int hasSingleRes(int sudo[9][9])
         if (k==x)
             continue;
         sudo[i][j] = k;
-        FILE *file = fopen("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp","w");
+        FILE *file = fopen("./Sudoku/sudo_temp","w");
         for (int m = 0; m < 9; ++m) {
             for (int n = 0; n < 9; ++n) {
                 fprintf(file,"%d",sudo[m][n]);
@@ -81,11 +81,11 @@ int hasSingleRes(int sudo[9][9])
         }
         fclose(file);
 
-        int r = Sudoku("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp");
+        int r = Sudoku("./Sudoku/sudo_temp");
         //删除临时文件
-        remove("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp");
-        remove("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp.cnf");
-        remove("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp.res");
+        remove("./Sudoku/sudo_temp");
+        remove("./Sudoku/sudo_temp.cnf");
+        remove("./Sudoku/sudo_temp.res");
 
         if (r==1)
         {
@@ -112,7 +112,7 @@ int las_vegas(int sudo[9][9],int box[9])
         int n = box[i+1];
         sudo[m][n] = rand()%9+1;
     }
-    char *name = makeFile(sudo,"/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp");
+    char *name = makeFile(sudo,"./Sudoku/sudo_temp");
     int n = Sudoku(name);
     if (n == 1)
     {
@@ -124,7 +124,7 @@ int las_vegas(int sudo[9][9],int box[9])
     }
     else
         initSudo(sudo);
-    remove("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo_temp");
+    remove("./Sudoku/sudo_temp");
     return n;
 }
 void makeSudo(int sudo[][9], char *res)

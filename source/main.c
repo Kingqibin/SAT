@@ -42,7 +42,7 @@ int main() {
                 sudo();
                 break;
             case 3:
-                game("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudo3");
+                game("./Sudoku/sudo3");
                 break;
             default:
                 printf("错误输入！\n");
@@ -60,10 +60,10 @@ int main() {
 }
 void sat()
 {
-    char *string[4] = {"/home/kingqi/work/CLanguage/SAT_2/input_file/base/function/sat-20.cnf",
-                       "/home/kingqi/work/CLanguage/SAT_2/input_file/base/function/unsat-5cnf-30.cnf",
-                       "/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.cnf",
-                       "/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.cnf"};
+    char *string[4] = {"./input_file/base/function/sat-20.cnf",
+                       "./input_file/base/function/unsat-5cnf-30.cnf",
+                       "./input_file/base/performance/ais10.cnf",
+                       "./input_file/base/performance/sud00009.cnf"};
     int a,b;
     char path[1024];
     printf("选择将要执行的功能:\n");
@@ -88,11 +88,11 @@ void sat()
             if (t==1)
             {
                 printf("sat-20.res:\n");
-                system("cat /home/kingqi/work/CLanguage/SAT_2/input_file/base/function/sat-20.res");
+                system("cat ./input_file/base/function/sat-20.res");
                 printf("\n");
 
                 printf("unsat-5cnf-30.cnf:\n");
-                system("cat /home/kingqi/work/CLanguage/SAT_2/input_file/base/function/unsat-5cnf-30.res");
+                system("cat ./input_file/base/function/unsat-5cnf-30.res");
                 printf("\n");
             }
             break;
@@ -108,27 +108,27 @@ void sat()
             if (t==1)
             {
                 printf("ais10.res:\n");
-                system("cat /home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.res");
+                system("cat ./input_file/base/performance/ais10.res");
                 printf("\n");
 
                 printf("sud00009.res:\n");
-                system("cat /home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.res");
+                system("cat ./input_file/base/performance/sud00009.res");
                 printf("\n");
             }
             break;
         case 3:
             printf("正在求解...\n");
-            char *out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.cnf",0);
+            char *out = SAT("./input_file/base/performance/ais10.cnf",0);
             int a1 = readTime(out);
             free(out);
-            out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/ais10.cnf",1);
+            out = SAT("./input_file/base/performance/ais10.cnf",1);
             int a2 = readTime(out);
             free(out);
 
-            out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.cnf",0);
+            out = SAT("./input_file/base/performance/sud00009.cnf",0);
             int b1 = readTime(out);
             free(out);
-            out = SAT("/home/kingqi/work/CLanguage/SAT_2/input_file/base/performance/sud00009.cnf",1);
+            out = SAT("./input_file/base/performance/sud00009.cnf",1);
             int b2 = readTime(out);
             free(out);
 
@@ -174,7 +174,7 @@ void sudo()
     if (a == 1)
     {
         srand(time(0));
-        int  m = readSudoNum("/home/kingqi/work/CLanguage/SAT_2/Sudoku/sudoNum");
+        int  m = readSudoNum("./Sudoku/sudoNum");
         int n = rand()%m + 1;
         char *fileName = getSudoFileName(n);
         printf("正在跳转中...\n");
