@@ -13,22 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="17335deb-e450-45e4-b80e-a2588e39fce2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/base/function/unsat-5cnf-30.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/base/function/unsat-5cnf-30.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/base/performance/sud00009.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/base/performance/sud00009.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/M/sud00001.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/M/sud00001.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/M/sud00009.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/M/sud00009.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/M/sud00012.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/M/sud00012.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/M/sud00021.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/M/sud00021.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/S/7cnf20_90000_90000_7.shuffled-20.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/S/7cnf20_90000_90000_7.shuffled-20.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/S/problem1-20.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/S/problem1-20.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/S/problem3-100.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/S/problem3-100.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/S/problem8-50.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/S/problem8-50.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/S/problem9-100.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/S/problem9-100.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/sat/S/tst_v25_c100.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/sat/S/tst_v25_c100.res" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_file/unsat/php-010-008.shuffled-as.sat05-1171.res" beforeDir="false" afterPath="$PROJECT_DIR$/input_file/unsat/php-010-008.shuffled-as.sat05-1171.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input_file/base/performance/ais10.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input_file/base/performance/sud00009.res" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myexe" beforeDir="false" afterPath="$PROJECT_DIR$/myexe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/CreateSudo.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/CreateSudo.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/helper.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/helper.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/DPLL.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/DPLL.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/SAT.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/SAT.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -44,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+            <state relative-caret-position="3780">
+              <caret line="174" column="22" lean-forward="true" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#501#543#0" expanded="true" />
@@ -57,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/CreateSudo.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="911">
-              <caret line="127" column="11" selection-start-line="127" selection-start-column="11" selection-end-line="127" selection-end-column="11" />
+            <state relative-caret-position="528">
+              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="e#603#659#0" expanded="true" />
               </folding>
@@ -67,9 +56,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/SAT.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/game.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-696">
+            <state relative-caret-position="168">
               <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
             </state>
           </provider>
@@ -136,11 +134,11 @@
         <option value="$PROJECT_DIR$/source/ClauseList.c" />
         <option value="$PROJECT_DIR$/source/Clause.c" />
         <option value="$PROJECT_DIR$/Sudoku/sudoNum" />
+        <option value="$PROJECT_DIR$/source/CreateSudo.c" />
+        <option value="$PROJECT_DIR$/source/helper.c" />
         <option value="$PROJECT_DIR$/source/SAT.c" />
         <option value="$PROJECT_DIR$/source/DPLL.c" />
         <option value="$PROJECT_DIR$/source/main.c" />
-        <option value="$PROJECT_DIR$/source/CreateSudo.c" />
-        <option value="$PROJECT_DIR$/source/helper.c" />
       </list>
     </option>
   </component>
@@ -158,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,6 +200,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,18 +284,19 @@
       <workItem from="1551090413364" duration="9978000" />
       <workItem from="1551176515074" duration="2303000" />
       <workItem from="1551184681553" duration="2091000" />
-      <workItem from="1551333931120" duration="904000" />
+      <workItem from="1551333931120" duration="1186000" />
+      <workItem from="1551338273979" duration="2112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203867000" />
+    <option name="totallyTimeSpent" value="206261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13820705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1398079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -635,13 +634,6 @@
         <state relative-caret-position="-516" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/DPLL.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4032">
-          <caret line="168" column="43" selection-start-line="168" selection-start-column="43" selection-end-line="168" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/Literal.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
@@ -661,23 +653,9 @@
         <state relative-caret-position="-444" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/SAT.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2172">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/MyStack.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-696">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/helper.c">
@@ -690,20 +668,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/game.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/CreateSudo.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="127" column="11" selection-start-line="127" selection-start-column="11" selection-end-line="127" selection-end-column="11" />
+        <state relative-caret-position="528">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="e#603#659#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/DPLL.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="127" column="1" lean-forward="true" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/SAT.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+        <state relative-caret-position="3780">
+          <caret line="174" column="22" lean-forward="true" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#501#543#0" expanded="true" />

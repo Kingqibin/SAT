@@ -13,12 +13,22 @@ char *SAT(char *name,int m)
     ClauseMap *myMap = createClauseMap(name);
     Literal *array = createLiteralArray(myMap->Count.eles);
     add_clauselist_to_literal(array,*myMap);
+    char *outputFile = replaceCNF(name);
+    if (m==3)
+    {
+        FILE *test = fopen(outputFile,"r");
+        if (test!=NULL)
+        {
+            fclose(test);
+            return outputFile;
+        }
+    }
 
     clock_t  s , f ;
     s = clock();
     Result r = DPLL(myMap,array,m);
     f = clock();
-    char *outputFile = replaceCNF(name);
+
     FILE *out = fopen(outputFile,"w");
     fprintf(out,"s ");
     if (r== Sat)

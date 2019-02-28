@@ -130,7 +130,7 @@ int pickLiteral(Literal *array,int m)
 {
     int size = array->value;
     int max = 0,save = 0;
-    if (m == 0)
+    if (m == 0 || m==3)
     {
         for (int i = 1; i <= size; ++i) {
             if ((array+i)->value != True &&(array+i)->value != False)
